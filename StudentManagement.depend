@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1651396986 source:d:\studentmanagement\class.cpp
+	"Class.h"
+
+1651403452 source:d:\studentmanagement\course.cpp
+	"Course.h"
+
+1651324795 source:d:\studentmanagement\main.cpp
+	"SystemProcess.h"
+
+1651400726 source:d:\studentmanagement\score.cpp
+	"Score.h"
+
+1651320872 source:d:\studentmanagement\staff.cpp
+
+1651398723 source:d:\studentmanagement\student.cpp
+	"Student.h"
+
+1651385357 source:d:\studentmanagement\login.cpp
+	"Login.h"
+
+1651385282 d:\studentmanagement\login.h
+	<string.h>
+	<iostream>
+	<conio.h>
+	<fstream>
+	<windows.h>
+
+1651386619 d:\studentmanagement\systemprocess.h
+	"Login.h"
+	"Student.h"
+	"Course.h"
+	"Class.h"
+
+1651403555 source:d:\studentmanagement\systemprocess.cpp
+	"SystemProcess.h"
+
+1651401204 d:\studentmanagement\student.h
+	<string.h>
+	<iostream>
+	<conio.h>
+	<fstream>
+	<windows.h>
+	"Course.h"
+	"Score.h"
+
+1651402359 d:\studentmanagement\course.h
+	<string.h>
+	<iostream>
+	<conio.h>
+	<fstream>
+	<windows.h>
+	"Score.h"
+	"Student.h"
+
+1651383959 d:\studentmanagement\score.h
+	<iostream>
+
+1651387314 d:\studentmanagement\class.h
+	<string.h>
+	<iostream>
+	<conio.h>
+	<fstream>
+	<windows.h>
+	"Student.h"
+	"Course.h"
+

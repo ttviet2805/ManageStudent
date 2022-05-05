@@ -132,3 +132,24 @@ void Account::changePassword() {
 
     saveAllAccountData(allAccount, accountFileName);
 }
+
+void addANewAccount(Account* newAccount) {
+    Account* allAccount = nullptr;
+    loadAllAccountData(allAccount, accountFileName);
+
+    if(!allAccount) {
+        allAccount = newAccount;
+        saveAllAccountData(allAccount, accountFileName);
+        return;
+    }
+
+    Account* curAccount = allAccount;
+
+    while(curAccount->Next) {
+        curAccount = curAccount->Next;
+    }
+
+    curAccount->Next = newAccount;
+
+    saveAllAccountData(allAccount, accountFileName);
+}

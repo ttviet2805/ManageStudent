@@ -32,4 +32,6 @@ Account* findAccountByID(Account* allAccount, string ID);
 
 Account* loginProcess();
 
+void addANewAccount(Account* newAccount);
+
 

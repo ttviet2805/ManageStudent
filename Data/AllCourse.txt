@@ -6,3 +6,5 @@ MTH212
 Calculus II
 PE
 Physical Education
+CM101
+Communication Management

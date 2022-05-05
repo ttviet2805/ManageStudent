@@ -21,7 +21,7 @@ void Course::loadCourseScoreData(string fileName, Student* &allStudent) {
 
         if(curStudent) {
             StudentScore* newScore = new StudentScore;
-            newScore->courseInfo = Info;
+            newScore->courseID = Info->courseID;
             newScore->studentScore->setScore(cur->Next->studentScore->MidTerm, cur->Next->studentScore->Final, cur->Next->studentScore->Other);
             curStudent->addStudentScore(newScore);
         }
@@ -122,4 +122,49 @@ Course* findCourseByID(Course* allCourse, string ID) {
     }
 
     return nullptr;
+}
+
+void Course::addCourseScore(CourseScore* newScore) {
+    if(!courseScoreHead) {
+        courseScoreHead = newScore;
+        return;
+    }
+
+    if(courseScoreHead->StudentID == newScore->StudentID) {
+        courseScoreHead->studentScore = newScore->studentScore;
+        return;
+    }
+
+    CourseScore* curScore = courseScoreHead;
+
+    while(curScore->Next) {
+        if(curScore->StudentID == newScore->StudentID) {
+            curScore->studentScore = newScore->studentScore;
+            return;
+        }
+
+        curScore = curScore->Next;
+    }
+
+    curScore->Next = newScore;
+}
+
+void Course::viewStudentScore() {
+    CourseScore* curScore = courseScoreHead;
+
+    while(curScore) {
+        cout << curScore->StudentID << '\n';
+        cout << curScore->studentScore->MidTerm << ' ' << curScore->studentScore->Final << ' ' << curScore->studentScore->Other << '\n';
+
+        curScore = curScore->Next;
+    }
+}
+
+CourseScore* createACourseScore(string studentID, float Midterm, float Final, float Other) {
+    CourseScore* newScore = new CourseScore;
+
+    newScore->StudentID = studentID;
+    newScore->studentScore->setScore(Midterm, Final, Other);
+
+    return newScore;
 }

@@ -33,6 +33,10 @@ struct Course {
     void loadCourseScoreData(string fileName, Student* &allStudent);
 
     void saveCourseScoreData(string fileName);
+
+    void addCourseScore(CourseScore* newScore);
+
+    void viewStudentScore();
 };
 
 void loadAllCourseData(Course* &allCourse, string fileName, Student* &allStudent);
@@ -42,3 +46,5 @@ void saveAllCourseData(Course* allCourse, string fileName);
 void showAllCourseData(Course* allCourse);
 
 Course* findCourseByID(Course* allCourse, string ID);
+
+CourseScore* createACourseScore(string studentID, float Midterm, float Final, float Other);

@@ -5,36 +5,19 @@
 #define courseFileName "Data/AllCourse.txt"
 #define courseScoreFileName "Data/CourseScore/"
 #define classFileName "Data/AllClass.txt"
+#define studentScoreFileName "Data/StudentScore/"
+#define staffFileName "Data/AllStaff.txt"
+#define studentInClassFileName "Data/Class/"
+#define studentCSVFileName "Data/StudentCSV.csv"
 
 void systemProcess() {
-//    Account* curAccount = loginProcess();
-//
     Student* allStudent = nullptr;
-
     loadAllStudentData(allStudent, studentFileName);
-//
-//    showAllStudentInfo(allStudent);
-//
-//    saveAllStudentData(allStudent, studentFileName);
+
+    system("pause");
 
     Course* allCourse = nullptr;
     loadAllCourseData(allCourse, courseFileName, allStudent);
 
-    showAllCourseData(allCourse);
 
-//    Student* tmp = allStudent;
-//    StudentScore* cc = tmp->Score;
-//    while(cc) {
-//        cout << cc->courseInfo->courseID << ' ' << cc->studentScore->Final << endl;
-//        cc = cc->Next;
-//    }
-
-    saveAllCourseData(allCourse, courseFileName);
-
-//    Class* allClass = nullptr;
-//    loadAllClassData(allClass, classFileName);
-//
-//    showAllClassData(allClass);
-//
-//    saveAllClassData(allClass, classFileName);
 }

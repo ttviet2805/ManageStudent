@@ -2,7 +2,7 @@
 1651396986 source:d:\studentmanagement\class.cpp
 	"Class.h"
 
-1651403452 source:d:\studentmanagement\course.cpp
+1651683093 source:d:\studentmanagement\course.cpp
 	"Course.h"
 
 1651324795 source:d:\studentmanagement\main.cpp
@@ -11,31 +11,33 @@
 1651400726 source:d:\studentmanagement\score.cpp
 	"Score.h"
 
-1651320872 source:d:\studentmanagement\staff.cpp
+1651681649 source:d:\studentmanagement\staff.cpp
+	"Staff.h"
 
-1651398723 source:d:\studentmanagement\student.cpp
+1651682969 source:d:\studentmanagement\student.cpp
 	"Student.h"
 
-1651385357 source:d:\studentmanagement\login.cpp
+1651417950 source:d:\studentmanagement\login.cpp
 	"Login.h"
 
-1651385282 d:\studentmanagement\login.h
+1651416998 d:\studentmanagement\login.h
 	<string.h>
 	<iostream>
 	<conio.h>
 	<fstream>
 	<windows.h>
 
-1651386619 d:\studentmanagement\systemprocess.h
+1651415917 d:\studentmanagement\systemprocess.h
 	"Login.h"
 	"Student.h"
 	"Course.h"
 	"Class.h"
+	"Staff.h"
 
-1651403555 source:d:\studentmanagement\systemprocess.cpp
+1651683111 source:d:\studentmanagement\systemprocess.cpp
 	"SystemProcess.h"
 
-1651401204 d:\studentmanagement\student.h
+1651682914 d:\studentmanagement\student.h
 	<string.h>
 	<iostream>
 	<conio.h>
@@ -43,8 +45,9 @@
 	<windows.h>
 	"Course.h"
 	"Score.h"
+	"Class.h"
 
-1651402359 d:\studentmanagement\course.h
+1651683049 d:\studentmanagement\course.h
 	<string.h>
 	<iostream>
 	<conio.h>
@@ -64,4 +67,16 @@
 	<windows.h>
 	"Student.h"
 	"Course.h"
+
+1651683675 d:\studentmanagement\staff.h
+	<string.h>
+	<iostream>
+	<conio.h>
+	<fstream>
+	<windows.h>
+	"Course.h"
+	"Score.h"
+	"Class.h"
+	"Student.h"
+	"Login.h"
 

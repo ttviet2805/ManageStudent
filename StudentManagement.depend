@@ -11,7 +11,7 @@
 1651400726 source:d:\studentmanagement\score.cpp
 	"Score.h"
 
-1651681649 source:d:\studentmanagement\staff.cpp
+1651683639 source:d:\studentmanagement\staff.cpp
 	"Staff.h"
 
 1651682969 source:d:\studentmanagement\student.cpp
@@ -27,7 +27,7 @@
 	<fstream>
 	<windows.h>
 
-1651415917 d:\studentmanagement\systemprocess.h
+1651904481 d:\studentmanagement\systemprocess.h
 	"Login.h"
 	"Student.h"
 	"Course.h"

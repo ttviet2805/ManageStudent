@@ -1,0 +1,171 @@
+Các đối tượng của struct và chức năng các hàm của các struct của hệ thống quản lý sinh viên
+1. Struct Account (Ở file Login.h và Login.cpp)
+*) Các đối tượng trong struct Account
+	- username và password: tài khoản và mật khẩu của 1 tài khoản
+	- type:
+		+) là -1 nếu không phải cả sinh viên và giáo vụ
+		+) là 0 nếu là giáo vụ
+		+) là 1 nếu là sinh viên
+	- *Next = nullptr: con trỏ Next để liên kết với tài khoản tiếp theo của 1 linked list
+
+*) Các hàm trong struct Account
+	- Constructor: void changePassword();
+		+) Để đổi mật khẩu tài khoản hiện tại
+
+	- void loadAllAccountData(Account* &allAccount, string fileName);
+		+) Là hàm load dữ liệu từ file danh sách các tài khoản
+		+) Account* &allAccount: là con trỏ đầu của danh sách liên kết tài khoản
+		+) string fileName: tên của file danh sách các tài khoản
+
+	- void saveAllAccountData(Account* allAccount, string fileName);
+		+) Là hàm lưu dữ liệu vào file danh sách các tài khoản
+		+) Account* &allAccount: là con trỏ đầu của danh sách liên kết tài khoản
+		+) string fileName: tên của file danh sách các tài khoản
+
+	- void showAllAccountData(Account* allAccount); 
+		+) In ra màn hình tất cả các tài khoản
+
+	- Account* findAccountByID(Account* allAccount, string ID);
+		+) Tìm tài khoản bằng ID bằng cách tìm từng tài khoản cho đến khi tìm thấy tài khoản bằng ID.
+		+) Account* allAccount: là con trỏ đầu của danh sách liên kết tài khoản
+		+) string ID: là ID của tài khoản mình cần tìm kiếm
+
+	- Account* loginProcess();
+		+) Xử lý quá trình đăng nhập và trả về struct tài khoản của User sau khi đăng nhập thành công
+
+	- void addANewAccount(Account* newAccount);
+		+) Thêm 1 tài khoản vào danh sách liên kết các tài khoản
+		+) Account* newAccount: tài khoản mới
+
+2. Struct Score (Ở file Score.h và Score.cpp)
+*) Các đối tượng trong struct Score
+	- MidTerm: là điểm giữa kì
+	- Final: là điểm cuối kì
+	- Other: là điểm khác
+	- Total: là điểm tổng kết
+
+*) Các hàm trong struct Score
+	- Constructor: void setScore(float __MidTerm, float __Final, float __Other);
+		+) Để tạo điểm cho struct Score
+	- Constructor: void calTotal();
+		+) Để tính điểm tổng kết và thay đổi biến total cho struct Score
+
+3. Struct Student (Ở file Student.h và file Student.cpp)
+*) Các đối tượng trong struct Student
+	- Info: là thông tin của học sinh trong struct StudentInfo ở trong file Student.h ở dòng 15 (Đọc xong StudentInfo struct rồi mới tiếp tục)
+	- StructScore ở trong file Student.h ở dòng 19: là điểm của học sinh hiện tại bao gồm tên khóa học và điểm của khóa học đó.
+	- Score: là danh sách điểm của học sinh hiện tại (Đây là 1 danh sách liên kết với kiểu dữ liệu là StudentScore ở trong file Student.h ở dòng 19 (Đọc xong rồi mới tiếp tục)
+	- *Next = nullptr: là con trỏ Next để liên kết đến học sinh tiếp theo
+
+*) Các hàm trong struct Student
+	- Constructor: void addStudentScore(StudentScore* newScore);
+		+ Thêm điểm của 1 học sinh 
+	- Constructor: void viewProfile();
+		+ Xem thông tin của học sinh hiện tại
+	- Constructor: void editProfile();
+		+ Điều chỉnh thông tin học sinh hiện tại
+	- Constructor: void viewScoreBoard();
+		+ Để xem điểm của học sinh hiện tại
+	- Constructor: void exportScoreBoard(string fileName);
+		+ Xuất điểm của học sinh hiện tại ra file
+ 	- Constructor: void viewStudentInCurrentClass();
+		+ Học sinh hiện tại xem danh sách học sinh cùng lớp mình
+	- void loadAllStudentData(Student* &allStudent, string fileName);
+		+ Load danh sách liên kết của học sinh vào biến allStudent từ file txt
+		+ Student* &allStudent: con trỏ đầu của danh sách liên kết học sinh
+		+ string fileName: là tên của file tất cả học sinh
+	- void saveAllStudentData(Student* allStudent, string FileName);
+		+ Để lưu tất cả học sinh vào file txt
+	- void showAllStudentInfo(Student* allStudent);
+		+ In ra màn hình thông tin tất cả học sinh
+		+ Student* allStudent: là con trỏ đầu của danh sách liên kết tất cả học sinh
+	- Student* findStudentByID(Student* allStudent, string ID);
+		+ Là tìm học sinh bằng ID
+	- StudentScore* createAStudentScore(string CourseID, float MidTerm, float Final, float Other);
+		+ Là tạo 1 điểm cho 1 course và trả về 1 StudentScore (Đọc lại struct StudentScore ở trên)
+
+4. Struct Course (Ở file Course.h và Course.cpp)
+*) Các đối tượng trong struct Course
+	- Đọc CourseScore ở dòng 20: với 1 CourseScore sẽ bao gồm ID của 1 sinh viên và điểm sinh viên đó trong khóa học hiện tại
+	- Info: là thông tin của khóa học trong struct CourseInfo ở file Course.h ở dòng 13 (Đọc xong rồi mới tiếp tục)
+	- CourseScore* courseScoreHead = nullptr;
+		+) Là con trỏ đầu của của 1 danh sách liên kết có kiểu dữ liệu là CourseScore
+	- *Next = nullptr: là con trỏ Next để liên kết đến môn học tiếp theo
+	- Phải đọc kĩ struct CourseScore và struct CourseInfo thì mới hiểu
+
+*) Các hàm trong struct Course
+	- Constructor: void loadCourseScoreData(string fileName, Student* &allStudent);
+		+) Để load tất cả các điểm của môn học của các học sinh cho khóa học hiện tại (Được lấy từ file Data/CourseScore/Tên_môn_học.txt)
+	- Constructor: void saveCourseScoreData(string fileName);
+		+) Để lưu điểm của các học sinh của khóa học hiện tại vào file txt
+	- Constructor: void addCourseScore(CourseScore* newScore);
+		+) Để thêm 1 CourseScore mới vào khóa học hiện tại
+	- Constructor: void viewStudentScore();
+		+) Để xem điểm của các học sinh trong khóa học hiện tại
+	- void loadAllCourseData(Course* &allCourse, string fileName, Student* &allStudent);
+		+) Để load tất cả dữ liệu khóa học từ file txt thành danh sách liên kết các khóa học
+		+) Course* &allCourse: là con trỏ đầu của danh sách liên kết các khóa học
+		+) Student* &allStudent: là con trỏ đầu danh sách liên kết tất cả học sinh
+	- void saveAllCourseData(Course* allCourse, string fileName);
+		+) Để lưu dữ liệu tất cả các khóa học ra file txt
+	- void showAllCourseData(Course* allCourse);
+		+) Để in ra màn hình tất cả các khóa học hiện tại
+	- Course* findCourseByID(Course* allCourse, string ID);
+		+) Để tìm khóa học dựa theo ID
+	- CourseScore* createACourseScore(string studentID, float Midterm, float Final, float Other);
+		+) Để tạo ra 1 con trỏ CourseScore mới từ thông tin là StudentID, Midterm, Final, Other
+	
+5. Struct Class (Ở file Class.h và Class.cpp)
+*) Các đối tượng trong struct Class
+	- Đọc kĩ struct StudentInClass ở dòng 14 file Class.h
+		+ Bao gồm ID của học sinh và con trỏ *Next sẽ tương ứng 1 StudentInClass tiếp theo
+		+ Trong 1 lớp học mình chỉ lưu thông tin là ID của 1 thằng học sinh thay vì lưu tất cả thông tin của học sinh
+		+ Rồi sau đó nếu mình muốn xử lý với 1 học sinh thì mình sẽ tìm thông tin của 1 học sinh bằng hàm findStudentByID() như đã hướng dẫn ở trên
+		+ Lưu như vậy để tránh thay đổi con trỏ Next trong danh sách liên kết tất cả mọi học sinh bởi vì:
+			+) Nếu như mình dùng 1 struct Student để trong struct Class thì nếu mình thay đổi con trỏ Next của 1 học sinh trong lớp thì sẽ thay đổi con trỏ Next của học sinh toàn trường
+			+) Do đó sẽ làm mình mất đi danh sách liên kết của tất cả học sinh (Bởi vì mình đã thay đổi cái Next của học sinh hiện tại rồi)
+			+) Vì vậy phải lưu ra 1 struct riêng để tránh thay đổi Next của struct Student
+			+) Bởi vì Next của 1 học sinh trong lớp sẽ khác Next của 1 học sinh toàn trường
+	
+	- string className: là tên của lớp hiện tại
+	- StudentInClass* studentHead = nullptr;
+		+) Là con trỏ đầu của danh sách liên kết các StudentInClass
+		+) *Next = nullptr: là con trỏ liên kết đến lớp tiếp theo
+
+*) Các hàm trong struct Class
+	- Constructor: void loadStudentInClass();
+		+) load các học sinh trong 1 lớp học: nghĩa là tạo 1 danh sách liên kết có kiểu dữ liệu StudentInClass
+	- void loadAllClassData(Class* &allClass, string fileName);
+		+) load các lớp học từ file txt ra 1 danh sách liên kết các lớp học
+	- void saveAllClassData(Class* allClass, string fileName);
+		+) Lưu thông tin các lớp ra file txt
+	- void showAllClassData(Class* allClass);
+		+) Để in ra màn hình dữ liệu tất cả các lớp
+	- Class* findClassByID(Class* allClass, string ID);
+		+) Tìm lớp học theo ID của lớp (tên lớp)
+
+6. Struct Staff (Ở file Staff.h và Staff.cpp)
+*) Các đối tượng trong struct Staff
+	- Đọc struct StaffInfo ở dòng 17 file Staff.h: bao gồm ID và tên đầy đủ
+	- StaffInfo* Info = new StaffInfo;
+		+) Là con trỏ trả về thông tin người quản lý
+	- Staff* Next = nullptr;
+		+) Là con trỏ liên kết đến Staff tiếp theo
+
+*) Các hàm trong struct Staff
+	- void loadAllStaffData(Staff* &allStaff, string fileName);
+		+ Để load ... (tương tự load các cái trên)
+	- void saveAllStaffData(Staff* allStaff, string fileName);
+		+ Tương tự save ...
+	- void showAllStaffData(Staff* allStaff);
+		+ Để in ra màn hình tất cả dữ liệu các staff
+	- void addANewStudent(Student* &allStudent, Student* newStudent);
+		+ Thêm 1 học sinh vào danh sách liên kết tất cả học sinh
+	- void deleteAStudent(Student* &allStudent, Student* delStudent);
+		+ Xóa 1 học sinh khỏi danh sách liên kết tất cả học sinh
+	- void viewStudentInAClass(Class* curClass);
+		+ Để xem tất cả học sinh ở trong 1 lớp học nào đó(Class* curClass)
+	- void exportStudentInAClass(Class* curClass, string fileName);
+		+ Để xuất tất cả học sinh trong 1 lớp ra file .csv
+	- void viewStudentInASameYear(string schoolYear);
+		+ Để in ra màn hình các học sinh trong cùng 1 khóa học

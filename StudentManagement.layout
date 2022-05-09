@@ -2,44 +2,39 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Course.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Student.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="991" topLine="20" />
+			<Cursor1 position="975" topLine="25" />
 		</Cursor>
 	</File>
-	<File name="Class.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="114" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="Login.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3562" topLine="125" />
-		</Cursor>
-	</File>
-	<File name="Staff.h" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="405" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="Student.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Student.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="5855" topLine="167" />
 		</Cursor>
 	</File>
-	<File name="Login.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Class.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="784" topLine="6" />
+			<Cursor1 position="114" topLine="21" />
 		</Cursor>
 	</File>
-	<File name="Course.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Staff.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4720" topLine="140" />
+			<Cursor1 position="405" topLine="17" />
 		</Cursor>
 	</File>
-	<File name="Staff.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Staff.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="4548" topLine="165" />
+		</Cursor>
+	</File>
+	<File name="Score.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="205" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="SystemProcess.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="692" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Class.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,29 +42,34 @@
 			<Cursor1 position="340" topLine="4" />
 		</Cursor>
 	</File>
+	<File name="Course.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4720" topLine="140" />
+		</Cursor>
+	</File>
+	<File name="Course.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="456" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="Login.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3562" topLine="122" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="69" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="SystemProcess.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="101" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Score.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Login.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="175" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="69" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Student.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1190" topLine="25" />
-		</Cursor>
-	</File>
-	<File name="SystemProcess.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="692" topLine="0" />
+			<Cursor1 position="385" topLine="7" />
 		</Cursor>
 	</File>
 	<File name="Score.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
